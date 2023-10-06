@@ -4,7 +4,7 @@ fun main() {
 //    for(i in 0..100) {
 //        checkPrimeNumber(number = i)
 //    }
-    checkPrimeNumber(number = 97)
+    checkPrimeNumber(number = 9)
 }
 fun checkPrimeNumber(number: Int) {
     var flag = false
