@@ -1,5 +1,4 @@
 fun main() {
-   //displayText(text = "Pushpak")
     reverseString(text = "Pushpak")
 }
 
