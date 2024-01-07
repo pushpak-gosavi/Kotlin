@@ -6,7 +6,7 @@ fun main (){
 }
 
 class PersonInfoData( val name:String){
-    init {
+    init  {
         println("this is example of Inti Block $name")
     }
     fun private(){
@@ -16,7 +16,9 @@ class PersonInfoData( val name:String){
         println("This is Secondary Inti Block")
     }
 
-    constructor(name: String, age:Int):this(name){
+    constructor (name: String, age:Int) :this(name){
         println("This is from secondary Constructor name= $name and age= $age")
     }
+
+
 }
