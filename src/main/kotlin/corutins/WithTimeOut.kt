@@ -1,6 +1,7 @@
 package corutins
 
 import kotlinx.coroutines.*
+import kotlinx.coroutines.time.withTimeout
 
 @OptIn(DelicateCoroutinesApi::class)
 fun main() {
@@ -11,12 +12,17 @@ fun main() {
 //            delay(1000)
 //        }
         println("Start the long running calculation...")
-        if (isActive) {
+        /**
+         * with time out is the Coroutine scope
+         * that will be cancel the job once the time is over
+         */
+        withTimeout(3000L) {
             for (i in 30..50) {
-                println("Result for i = $i : ${fib(i)}")
+                if (isActive)
+                    println("Result for i = $i : ${fib(i)}")
             }
+            println("Ending long running calculation...")
         }
-        println("Ending long running calculation...")
     }
     runBlocking {
         delay(100L)
